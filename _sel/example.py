@@ -10,3 +10,6 @@ element = driver.find_element(By.LINK_TEXT, "ファイナンス")
 element.click()
 time.sleep(5)
 driver.quit()
+
+# 実行
+# python3 example.py 
