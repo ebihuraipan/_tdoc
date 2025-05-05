@@ -1,21 +1,45 @@
+# vitest
 
 
-pnpm create vite
+
+## インストール
 
 
+
+### テストの雛形サイトを作る
+
+`pnpm create vite`
+
+色々選択する
+
+```
 Select a framework:
+->Vue
+Select a variant:
+->JavaScript
+```
 
-> Vue
-> Select a variant:
-> JavaScript
 
-pnpm add -D vitest
 
+### テストをインストール
+
+`pnpm add -D vitest`
+
+
+
+追記する
+
+```
  "scripts": {
     "test":"vitest"
  }
+```
 
-pnpm test
+
+
+テスト実行
+
+`pnpm test`
 
 
 
