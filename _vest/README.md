@@ -11,7 +11,11 @@ Select a framework:
 
 pnpm add -D vitest
 
+ "scripts": {
+    "test":"vitest"
+ }
 
+pnpm test
 
 
 
