@@ -43,6 +43,7 @@ Select a variant:
 
 
 
+pnpm add vue-router
 
 
 
