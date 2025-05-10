@@ -1,30 +1,22 @@
 <script setup>
-import { ref } from 'vue'
-import { defineStore } from 'pinia'
+//import { ref } from 'vue'
+//import { defineStore } from 'pinia'
+import { useBoardStore } from '../stores/boardList.js'
 
+const board = useBoardStore()
 
-defineProps({
-  msg: String,
-})
-
-//const count = ref(0)
-
-import { useCounterStore } from '../stores/counter'
-
-const counter = useCounterStore()
-
-//counter.count++
-//// with autocompletion ✨
-//counter.$patch({ count: counter.count + 1 })
-//// or using an action instead
-counter.increment()
 </script>
 
 <template >
-    <div class="green">
-      <div>Current Count: {{ counter.count }}</div>
+    <div class="">
+      <h1>板一覧</h1>
+        <span v-for="b of board.list">
+          <router-link  :to="'/b/' + b.bid" replace>{{ b.title }}</router-link>
+          <br>
+        </span>
     </div>
-</template>
+</template>u
+
 
 <style scoped>
 .green {

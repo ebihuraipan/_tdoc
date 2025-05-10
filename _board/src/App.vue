@@ -5,12 +5,12 @@
 
 <template>
   <div id="sidebar">
-    <div class="col">
-      <router-link to="/board" replace>掲示板</router-link>
-      <router-link to="/thread" replace>スレッド</router-link>
-      <router-link to="/response" replace>レスポンス</router-link>
+    <div class="col red">
+      <router-link to="/b" replace>掲示板</router-link>
+      <!--<router-link to="/thread" replace>スレッド</router-link>
+      <router-link to="/response" replace>レスポンス</router-link>-->
     </div>
-    <div>
+    <div class="blue">
       <router-view v-slot="{ Component }">
         <Transition name="fade">
           <component :is="Component" />
@@ -29,5 +29,10 @@
 .orange{
   background-color: orange;
 }
-
+/*.red{
+  background-color:red;
+}
+.blue{
+  background-color:blue;
+}*/
 </style>

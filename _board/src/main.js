@@ -10,3 +10,16 @@ const app = createApp(App);
 app.use(pinia);
 app.use(router);
 app.mount("#app");
+
+
+//let aaa = [
+//    { bid: 1, name: "マンデリン" },
+//    { bid: 2, name: "ケニア" },
+//    { bid: 3, name: "インド" },
+//    { bid: 4, name: "ブラジル" },
+//    { bid: 5, name: "タンザニア" },
+//].find((a)=>{
+//    return a.bid === 1
+
+//}).name
+//console.log(aaa)

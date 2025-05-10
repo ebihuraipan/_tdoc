@@ -2,19 +2,36 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Board from "./components/_01Board.vue";
 import Thread from "./components/_02Thread.vue";
-const routes = [];
+import Response from "./components/_03Response.vue";
+const routes = [
+    {
+        path: "/b",
+        name: "board",
+        component: Board,
+    },
+    {
+        path: "/b/:bid",
+        name: "thread",
+        component: Thread,
+    },
+    {
+        path: "/b/:bid/:tid",
+        name: "response",
+        component: Response,
+    },
+];
 
 // 一般的なルートの追加（動的インポート）
-routes.push({
-    path: "/board",
-    name: "board",
-    component: Board,
-});
-routes.push({
-    path: "/thread",
-    name: "thread",
-    component: Thread,
-});
+//routes.push({
+//    path: "/b",
+//    name: "board",
+//    component: Board,
+//});
+//routes.push({
+//    path: "/b/:bid",
+//    name: "thread",
+//    component: Thread,
+//});
 // 存在しないパスは全てTOPへ
 //routes.push(
 //  {
