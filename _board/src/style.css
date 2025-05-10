@@ -114,6 +114,13 @@ body {
   transition: border-color 0.25s;
 }
 
+/*.red{
+  background-color:red;
+}
+.blue{
+  background-color:blue;
+}*/
+
 .fade-enter-active {
   transition: opacity 1.5s;
   opacity: 0;

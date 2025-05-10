@@ -2,7 +2,7 @@
     <div class="col">
         <div class="col">
             <div>
-                <textarea class="wform" v-model="wtext"></textarea>
+                <textarea id="addTextTop" v-model="addText"></textarea>
             </div>
             <div class="rowr">
                 <button @click="addResponse" class="btn">書き込み</button>
@@ -10,8 +10,8 @@
         </div>
         <hr>
         <div class="">
-            <h1>{{ttitle}}</h1>
-            <div class="col r_text" v-for="r of responseStore.getResponseList(tid)">
+            <h1>{{addTitle}}</h1>
+            <div class="col line" v-for="r of responseStore.getResponseList(tid)">
                 <div class="between">
                     <b>{{ r.rid }}:</b>
                     <span>{{ r.date }}</span>
@@ -23,7 +23,7 @@
         <hr>
         <div class="col">
             <div>
-                <textarea class="wform" v-model="wtext"></textarea>
+                <textarea id="addTextBottom" v-model="addText"></textarea>
             </div>
             <div class="rowr">
                 <button @click="addResponse" class="btn">書き込み</button>
@@ -43,27 +43,31 @@ import router from '../router.js'
 const threadStore = useThreadStore()
 const responseStore = useResponseStore()
 let tid = ref(0)
-let ttitle = ref("")
-let wtext = ref("")
+let addTitle = ref("")
+let addText = ref("")
 // 関数
 watchEffect(()=>{
     let _tid = parseInt(router.currentRoute.value.params.tid)
     tid.value = _tid
-    ttitle.value = threadStore.getThreadTitle(_tid)
+    addTitle.value = threadStore.getThreadTitle(_tid)
 })
 function addResponse(){
-    responseStore.addResponse(tid.value, wtext.value)
+    responseStore.addResponse(tid.value, addText.value)
 }
 </script>
 
 <style scoped>
-.r_text {
+.line {
     padding:10px;
     background-color: lightsalmon;
     margin-top: 0px;
     margin-bottom: 5px;
 }
-.wform{
+#addTextTop{
+    width:100%;
+    height:100px;
+}
+#addTextBottom{
     width:100%;
     height:100px;
 }

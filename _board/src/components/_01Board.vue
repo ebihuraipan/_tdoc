@@ -3,10 +3,10 @@
     <div>
       <div>
         <b>タイトル➡</b>
-        <input id="twrite" type="text" v-model="add_title"/>
+        <input id="createTitle" type="text" v-model="createTitle"/>
       </div>
       <div>
-          <textarea class="wform" v-model="add_text"></textarea>
+          <textarea id="createText" v-model="createText"></textarea>
       </div>
       <button @click="addThread" class="btn">スレッド作成</button>
     </div>
@@ -27,30 +27,28 @@
 import { ref } from 'vue';
 import { useThreadStore } from '../stores/_02threadList.js'
 import { useResponseStore } from '../stores/_03responseList.js'
+import { zeroFill } from '../helper.js'	
 // 変数
 const threadStore = useThreadStore()
 const responseStore = useResponseStore()
-let add_title = ref("")
-let add_text = ref("")
+let createTitle = ref("")
+let createText = ref("")
 // 関数
 function addThread() {
-  let new_tid = threadStore.addThread(add_title.value)
-  responseStore.addResponse(new_tid, add_text.value)
-  add_title.value = ""
-  add_text.value = ""
+  let newTid = threadStore.addThread(createTitle.value)
+  responseStore.addResponse(newTid, createText.value)
+  createTitle.value = ""
+  createText.value = ""
 }
 </script>
 
 
 <style scoped>
-.green {
-  background-color: green;
-}
-#twrite{
+#createTitle{
   width:500px;
 }
-.wform{
-    width:100%;
-    height:100px;
+#createText{
+  width:100%;
+  height:100px;
 }
 </style>

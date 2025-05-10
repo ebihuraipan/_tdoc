@@ -5,7 +5,7 @@
 
 <template>
   <div id="center">
-    <div id="w">
+    <div id="widthPage">
       <div>
       <router-link to="/b" replace>
         <h1>掲示板</h1>
@@ -29,7 +29,7 @@
   justify-content: center;
 
 }
-#w{
+#widthPage{
 	display: flex;
   flex-direction: column;
   width: 700px;
@@ -38,10 +38,4 @@
 .orange{
   background-color: orange;
 }
-/*.red{
-  background-color:red;
-}
-.blue{
-  background-color:blue;
-}*/
 </style>

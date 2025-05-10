@@ -3,11 +3,8 @@ export const useThreadStore = defineStore("thread", {
     state: () => {
         return {
             list: [
-                { tid: 1, name: "seleniumが動かない" },
-                { tid: 2, name: "playWrightが動かない" },
-                { tid: 3, name: "runnが動かない" },
-                { tid: 4, name: "vitestが動かない" },
-                { tid: 5, name: "何も動かない" },
+                { tid: 1, name: "スレッド1" },
+                { tid: 2, name: "スレッド2" },
             ],
         };
     },
