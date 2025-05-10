@@ -1,7 +1,7 @@
 <script setup>
 import { ref,watchEffect } from 'vue'
-import { useThreadStore } from '../stores/threadList.js'
-import { useResponseStore } from '../stores/responseList.js'
+import { useThreadStore } from '../stores/_02threadList.js'
+import { useResponseStore } from '../stores/_03responseList.js'
 import router from '../router.js'	
 
 const threadStore = useThreadStore()

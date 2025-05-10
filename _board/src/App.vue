@@ -4,27 +4,36 @@
 </script>
 
 <template>
-  <div id="sidebar">
-    <div class="col red">
-      <router-link to="/b" replace>掲示板</router-link>
-      <!--<router-link to="/thread" replace>スレッド</router-link>
-      <router-link to="/response" replace>レスポンス</router-link>-->
+  <div id="center">
+    <div id="w">
+      <div>
+      <router-link to="/b" replace>
+        <h1>掲示板</h1>
+      </router-link>
     </div>
-    <div class="blue">
+    <div>
       <router-view v-slot="{ Component }">
         <Transition name="fade">
           <component :is="Component" />
         </Transition>
       </router-view>
-
+    </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-#sidebar{
-	display: grid;
-  grid-template-columns: 200px 400px;
+#center{
+	display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+#w{
+	display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 100vh;
 }
 .orange{
   background-color: orange;

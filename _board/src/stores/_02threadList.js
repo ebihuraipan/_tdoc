@@ -1,4 +1,3 @@
-// stores/counter.ts
 import { defineStore } from "pinia";
 export const useThreadStore = defineStore("thread", {
     state: () => {
@@ -29,9 +28,13 @@ export const useThreadStore = defineStore("thread", {
         },
     },
     actions: {
-        addThread (title) {
-            let last = this.list.sort((a, b) => a.tid - b.tid)[this.list.length-1]
-            this.list.push( { tid: last.tid + 1, name: title });
+        addThread(title) {
+            let last = this.list.sort((a, b) => a.tid - b.tid)[
+                this.list.length - 1
+            ];
+            let newId = last.tid + 1;
+            this.list.push({ tid: newId, name: title });
+            return newId;
         },
     },
 });
