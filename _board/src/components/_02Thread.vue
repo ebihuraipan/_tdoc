@@ -1,39 +1,37 @@
+<template>
+  <div class="">
+    <h1>{{ttitle}}</h1>
+    <div v-for="r of responseStore.getResponseList(tid)">
+      <pre class="r_text">
+        {{ r.text }}
+      </pre>
+    </div>
+  </div>
+</template>
+
 <script setup>
-
-import { watchEffect,ref, computed } from 'vue';
-import { storeToRefs } from "pinia";
-import router from '../router.js'	
-import { useBoardStore } from '../stores/boardList.js'
+import { ref,watchEffect } from 'vue'
 import { useThreadStore } from '../stores/threadList.js'
+import { useResponseStore } from '../stores/responseList.js'
+import router from '../router.js'	
 
-const boardStore = useBoardStore()
-const thread = useThreadStore()
+const threadStore = useThreadStore()
+const responseStore = useResponseStore()
 
-let bid = ref(0)
-let btitle = ref("")
-
+let tid = ref(0)
+let ttitle = ref("")
 watchEffect(()=>{
-  //console.log(boardStore.board)
-  let _bid = parseInt(router.currentRoute.value.params.bid)
-  bid.value = _bid
-  btitle.btitle = boardStore.getBoardTitle(_bid)
+  let _tid = parseInt(router.currentRoute.value.params.tid)
+  tid.value = _tid
+  ttitle.value = threadStore.getThreadTitle(_tid)
 })
 
 </script>
 
-<template >
-  <div class="">
-    <h1>{{btitle}}</h1>
-    <h3>スレッド一覧{{ bid }}</h3>
-      <router-link
-        v-for="t of thread.getThreadList(bid)"
-        :to="'/b/' + bid + '/' + t.tid"
-        >
-        {{ t.name }}<br>
-      </router-link>
-  </div>
-</template>
+
 
 <style scoped>
-
+.r_text {
+  background-color: #888;
+}
 </style>

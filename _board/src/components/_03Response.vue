@@ -21,7 +21,7 @@ watchEffect(()=>{
 
 </script>
 
-<template >
+<template>
   <div class="">
     <h1>{{ttitle}}</h1>
     <div v-for="r of responseStore.getResponseList(bid,tid)">

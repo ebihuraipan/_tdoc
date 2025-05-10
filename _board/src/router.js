@@ -10,7 +10,7 @@ const routes = [
         component: Board,
     },
     {
-        path: "/b/:bid",
+        path: "/b/:tid",
         name: "thread",
         component: Thread,
     },

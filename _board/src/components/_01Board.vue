@@ -1,21 +1,34 @@
-<script setup>
-//import { ref } from 'vue'
-//import { defineStore } from 'pinia'
-import { useBoardStore } from '../stores/boardList.js'
-
-const board = useBoardStore()
-
-</script>
-
 <template >
-    <div class="">
-      <h1>板一覧</h1>
-        <span v-for="b of board.list">
-          <router-link  :to="'/b/' + b.bid" replace>{{ b.title }}</router-link>
-          <br>
-        </span>
+  <div class="col">
+    <div>
+      <input type="text" v-model="add_title"/>
+      <button @click="addThread">スレッド作成</button>
     </div>
-</template>u
+    <div class="">
+      <h3>スレッド一覧</h3>
+        <router-link
+          v-for="t of threadStore.list"
+          :to="'/b/' + t.tid"
+          >
+          {{ t.name }}<br>
+        </router-link>
+    </div>
+  </div>
+</template>
+
+
+<script setup>
+// 前提
+import { ref } from 'vue';
+import { useThreadStore } from '../stores/threadList.js'
+// 変数
+const threadStore = useThreadStore()
+let add_title = ref("")
+//関数
+function addThread() {
+  threadStore.addThread(add_title.value)
+}
+</script>
 
 
 <style scoped>
