@@ -27,7 +27,7 @@
 import { ref } from 'vue';
 import { useThreadStore } from '../stores/_02threadList.js'
 import { useResponseStore } from '../stores/_03responseList.js'
-import { zeroFill } from '../helper.js'	
+import { zeroFill,getYmdHis } from '../helper.js'	
 // 変数
 const threadStore = useThreadStore()
 const responseStore = useResponseStore()

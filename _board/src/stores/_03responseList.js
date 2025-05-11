@@ -1,5 +1,6 @@
 // stores/counter.ts
 import { defineStore } from "pinia";
+import { zeroFill, getYmdHis } from "../helper.js";
 export const useResponseStore = defineStore("response", {
     state: () => {
         return {
@@ -79,7 +80,7 @@ export const useResponseStore = defineStore("response", {
                 tid: _tid,
                 rid: rid,
                 text: _text,
-                date: d.toLocaleString(),
+                date: getYmdHis(),
             });
         },
     },

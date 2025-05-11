@@ -11,14 +11,18 @@
         <hr>
         <div class="">
             <h1>{{addTitle}}</h1>
-            <div class="col line" v-for="r of responseStore.getResponseList(tid)">
+            <!--<div class="col line" v-for="r of responseStore.getResponseList(tid)">
                 <div class="between">
                     <b>{{ r.rid }}:</b>
                     <span>{{ r.date }}</span>
                 </div>
-                
                 <pre style="margin:0px;padding:0px;">{{ r.text }}</pre>
-            </div>
+            </div>-->
+            <Response v-for="r of responseStore.getResponseList(tid)" 
+                :id="r.rid"
+                :date="r.date"
+                :text="r.text"
+            />
         </div>
         <hr>
         <div class="col">
@@ -38,6 +42,7 @@
 import { ref,watchEffect } from 'vue'
 import { useThreadStore } from '../stores/_02threadList.js'
 import { useResponseStore } from '../stores/_03responseList.js'
+import Response from './_03Response.vue'
 import router from '../router.js'	
 // 変数
 const threadStore = useThreadStore()
@@ -57,12 +62,7 @@ function addResponse(){
 </script>
 
 <style scoped>
-.line {
-    padding:10px;
-    background-color: lightsalmon;
-    margin-top: 0px;
-    margin-bottom: 5px;
-}
+
 #addTextTop{
     width:100%;
     height:100px;
@@ -71,5 +71,10 @@ function addResponse(){
     width:100%;
     height:100px;
 }
-
+.line {
+    padding:10px;
+    background-color: lightsalmon;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
 </style>
