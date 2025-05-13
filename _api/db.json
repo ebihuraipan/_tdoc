@@ -1,23 +1,88 @@
 {
-  "posts": [
+  "posts":[
     {
-      "id": "1",
-      "title": "json-server",
-      "author": "typicode"
+      "id": 1,
+      "product": "Laptop",
+      "price": 1200,
+      "inStock": true,
+      "rating": 4.8
     },
     {
-      "id": "869f",
-      "title": "test"
-    }
-  ],
-  "comments": [
+      "id": 2,
+      "product": "Mouse",
+      "price": 25,
+      "inStock": true,
+      "rating": 4.5
+    },
     {
-      "id": "1",
-      "body": "some comment",
-      "postId": 1
+      "id": 3,
+      "product": "Keyboard",
+      "price": 75,
+      "inStock": false,
+      "rating": 4.2
+    },
+    {
+      "id": 4,
+      "product": "Monitor",
+      "price": 300,
+      "inStock": true,
+      "rating": 4.7
+    },
+    {
+      "id": 5,
+      "product": "Webcam",
+      "price": 50,
+      "inStock": true,
+      "rating": 4.0
+    },
+    {
+      "id": 6,
+      "product": "Headphones",
+      "price": 150,
+      "inStock": true,
+      "rating": 4.6
+    },
+    {
+      "id": 7,
+      "product": "Speaker",
+      "price": 100,
+      "inStock": false,
+      "rating": 4.3
+    },
+    {
+      "id": 8,
+      "product": "Tablet",
+      "price": 400,
+      "inStock": true,
+      "rating": 4.9
+    },
+    {
+      "id": 9,
+      "product": "Printer",
+      "price": 200,
+      "inStock": true,
+      "rating": 3.8
+    },
+    {
+      "id": 10,
+      "product": "Scanner",
+      "price": 180,
+      "inStock": true,
+      "rating": 4.1
+    },
+    {
+      "id": 11,
+      "product": "External HDD",
+      "price": 120,
+      "inStock": true,
+      "rating": 4.4
+    },
+    {
+      "id": 12,
+      "product": "USB Hub",
+      "price": 30,
+      "inStock": true,
+      "rating": 4.7
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

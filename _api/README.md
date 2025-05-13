@@ -15,10 +15,12 @@
 npx json-server --watch db.json -p 3000
 
 # APIサーバ起動確認
+
 curl -H "Content-Type: application/json" -d '{"title":"test"}' -X POST http://localhost:3000/posts
 ```
 
-
+node http.js 
+curl -H "Content-Type: application/json" -X GET http://localhost:3003/
 
 
 
