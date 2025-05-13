@@ -1,0 +1,19 @@
+desc: get3つ目
+runners:
+  req: http://localhost:3003
+vars:
+  count: 12
+steps:
+  query:
+    req:
+      /:
+        get:
+          body:
+            application/json: null
+    test: |
+      // ステータスコードが200であること
+      current.res.status == 200
+      // 記事の件数が正しいこと
+      && len(current.res.body) == vars.count
+      //
+      && first(current.res.body).id == 1

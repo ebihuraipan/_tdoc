@@ -1,0 +1,12 @@
+desc: get2つ目
+runners:
+  req: http://localhost:3003
+steps:
+  query:
+    req:
+      /:
+        get:
+          body:
+            application/json: null
+    test: current.res.status == 200
+

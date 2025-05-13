@@ -1,0 +1,5 @@
+desc: hello
+steps:
+  -
+    dump: "'Hello world!'"
+# runn run yml/hello.yml
