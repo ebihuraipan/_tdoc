@@ -13,7 +13,7 @@ def scsho(fn):
 driver = webdriver.Chrome()
 driver.get('http://localhost:3002')
 time.sleep(2)
-scsho("_02_02.png")
+scsho("_02_01.png")
 time.sleep(2)
 
 # 入力
