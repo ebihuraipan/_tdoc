@@ -67,12 +67,12 @@
 
 ここのpythonバージョン番号をクリックして、
 
-![](/home/u20/Desktop/_tdoc/_sel/img/python_interpreter_001.png)
+![](img/python_interpreter_001.png)
 
 `~/venv`に仮想環境を置いた場合、
 
 pythonインタプリタパスに`~/venv/bin/python3`を選択する
 
-![python_interpreter_002](/home/u20/Desktop/_tdoc/_sel/img/python_interpreter_002.png)
+![python_interpreter_002](img/python_interpreter_002.png)
 
 しばらくすると？下記になってシンタックスエラーが消える
