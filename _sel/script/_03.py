@@ -37,7 +37,7 @@ scsho("_03_04.png")
 driver.execute_script("window.scrollTo(0, 500);")
 scsho("_03_05.png")
 
-# 入力1
+# 入力2
 el = driver.find_element(By.ID, "addTextBottom")
 el.send_keys("自動入力____下のフォーム書き込み__1\n")
 scsho("_03_06.png")
@@ -52,3 +52,4 @@ driver.quit()
 
 # 実行
 # python3 script/_03.py 
+
