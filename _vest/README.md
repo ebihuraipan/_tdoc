@@ -24,7 +24,8 @@ Select a variant:
 ### テストをインストール
 
 `pnpm add -D vitest`
-
+pnpm add -D @vue/test-utils
+pnpm add -D @vitest/coverage-v8
 
 
 追記する
@@ -44,6 +45,11 @@ Select a variant:
 
 
 pnpm add vue-router
+
+
+
+
+
 
 
 
