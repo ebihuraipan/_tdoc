@@ -1,13 +1,30 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Message from './components/Message.vue'
+import SomeForm from './components/SomeForm.vue'
+
 </script>
 
 <template>
-  <div>
+
+  <Message msg="メッセージ" />
+  <hr>
+  <SomeForm />
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+
+  
+  
+  
+  
+
+  <!--<div>
     <router-link :to="{ path: '/home'}">HOME</router-link>,
     <router-link :to="{ path: '/home2'}">About</router-link>
   </div>
-  <router-view/>
+  <router-view/>-->
 
   <!--<HelloWorld msg="Vite + Vue" />-->
 </template>
