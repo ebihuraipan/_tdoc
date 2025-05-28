@@ -1,0 +1,31 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main # mainブランチへのプッシュをトリガー
+  pull_request:
+    branches:
+      - main # mainブランチへのプルリクエストをトリガー
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # 実行環境 (Ubuntuの最新版)
+    defaults:
+      run:
+        working-directory: _vest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4 # リポジトリのコードをチェックアウト
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' # 使用するNode.jsのバージョンを指定
+
+    - name: Install dependencies
+      run: npm ci # 依存関係をインストール (package-lock.jsonを使う場合はnpm ciが推奨)
+
+    - name: Run tests
+      run: npm test # テストを実行
