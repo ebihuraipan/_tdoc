@@ -1,0 +1,54 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: _vest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+
+    - name: Debug information
+      run: |
+        echo "Node version: $(node -v)"
+        echo "PNPM version: $(pnpm -v)"
+        echo "Current directory: $(pwd)"
+        ls -la
+
+    - name: Install dependencies
+      run: |
+        echo "Installing dependencies..."
+        pnpm install --frozen-lockfile
+        if [ $? -ne 0 ]; then
+          echo "pnpm install failed"
+          echo "package.json contents:"
+          cat package.json
+          echo "node_modules status:"
+          ls -la node_modules
+          exit 1
+        fi
+        echo "Dependencies installed successfully"
+
+    - name: Run tests
+      run: pnpm test --verbose || (echo "tests failed" && exit 1) 
