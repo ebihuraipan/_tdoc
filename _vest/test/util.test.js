@@ -8,7 +8,7 @@ import {
     afterAll,
     afterEach,
 } from "vitest";
-import { zero_fill, convert_yyyymmdd } from "../src/util.js";
+import { zero_fill, convert_yyyymmdd } from "../src/js/util.js";
 
 describe("ゼロ埋め", () => {
     it("3桁", () => {
