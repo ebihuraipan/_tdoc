@@ -1,5 +1,5 @@
 import { expect, it, describe, afterEach, vi } from "vitest";
-import * as calc from "../src/sum.js";
+import * as calc from "../src/js/sum.js";
 
 describe("add", () => {
     afterEach(() => {

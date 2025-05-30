@@ -8,7 +8,7 @@ import {
     afterAll,
     afterEach,
 } from "vitest";
-import { add } from "../src/sum.js";
+import { add } from "../src/js/sum.js";
 
 //実行前実行後処理
 describe("suit", () => {
