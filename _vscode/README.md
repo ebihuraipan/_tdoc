@@ -10,7 +10,6 @@ code --list-extensions
 
 ### VSCode拡張機能一覧
 
-
 ```bash
 # 開発環境関連
 code --install-extension christian-kohler.npm-intellisense
@@ -18,6 +17,8 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension denoland.vscode-deno
 code --install-extension esbenp.prettier-vscode
 code --install-extension editorconfig.editorconfig
+code --install-extension mosapride.zenkaku
+code --install-extension shardulm94.trailing-spaces
 
 # Git関連
 code --install-extension eamodio.gitlens
@@ -48,12 +49,15 @@ code --install-extension ms-ceintl.vscode-language-pack-ja
 code --install-extension oderwat.indent-rainbow
 code --install-extension visualstudioexptteam.vscodeintellicode
 code --install-extension visualstudioexptteam.intellicode-api-usage-examples
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension redhat.vscode-yaml
+code --install-extension bradlc.vscode-tailwindcss
 ```
 
 または、以下のコマンドで一括インストールすることもできます：
 
 ```bash
-code --install-extension christian-kohler.npm-intellisense dbaeumer.vscode-eslint denoland.vscode-deno esbenp.prettier-vscode editorconfig.editorconfig eamodio.gitlens mhutchie.git-graph hollowtree.vue-snippets vue.volar ms-python.python ms-python.vscode-pylance ms-python.debugpy vscjava.vscode-java-pack vscjava.vscode-java-debug vscjava.vscode-java-test vscjava.vscode-maven vscjava.vscode-gradle ms-playwright.playwright vitest.explorer ms-ceintl.vscode-language-pack-ja oderwat.indent-rainbow visualstudioexptteam.vscodeintellicode visualstudioexptteam.intellicode-api-usage-examples
+code --install-extension christian-kohler.npm-intellisense dbaeumer.vscode-eslint denoland.vscode-deno esbenp.prettier-vscode editorconfig.editorconfig eamodio.gitlens mhutchie.git-graph hollowtree.vue-snippets vue.volar ms-python.python ms-python.vscode-pylance ms-python.debugpy vscjava.vscode-java-pack vscjava.vscode-java-debug vscjava.vscode-java-test vscjava.vscode-maven vscjava.vscode-gradle ms-playwright.playwright vitest.explorer ms-ceintl.vscode-language-pack-ja oderwat.indent-rainbow visualstudioexptteam.vscodeintellicode visualstudioexptteam.intellicode-api-usage-examples ms-azuretools.vscode-docker redhat.vscode-yaml bradlc.vscode-tailwindcss mosapride.zenkaku shardulm94.trailing-spaces
 ```
 
 #### 開発環境関連
@@ -62,6 +66,8 @@ code --install-extension christian-kohler.npm-intellisense dbaeumer.vscode-eslin
 - [Deno](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno) - Denoランタイム
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - コードフォーマッター
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig) - エディタ設定の統一
+- [ZenKaku](https://marketplace.visualstudio.com/items?itemName=mosapride.zenkaku) - 全角文字の入力支援
+- [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces) - 行末の空白文字の削除
 
 #### Git関連
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - Gitの拡張機能
@@ -91,4 +97,7 @@ code --install-extension christian-kohler.npm-intellisense dbaeumer.vscode-eslin
 - [Japanese Language Pack](https://marketplace.visualstudio.com/items?itemName=ms-ceintl.vscode-language-pack-ja) - 日本語言語パック
 - [Indent Rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - インデントの可視化
 - [IntelliCode](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode) - AI支援コード補完
-- [IntelliCode API Usage Examples](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.intellicode-api-usage-examples) - API使用例の提案 
+- [IntelliCode API Usage Examples](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.intellicode-api-usage-examples) - API使用例の提案
+- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) - Dockerサポート
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - YAML言語サポート
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Tailwind CSSのインテリセンス
